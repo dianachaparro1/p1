@@ -1,0 +1,30 @@
+<div class="=col-md-12">
+    <button type="button" name="" id="" class="btn btn-primary btn-lg btn-block" (click)="Borrar()">Borrar</button>
+</div>
+
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">Icono</th> 
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido Paterno</th>
+        <th scope="col">Apellido Materno</th>
+        <th scope="col">Edad</th>
+        <th scope="col">Sexo</th>
+        <th scope="col">correo</th>      
+      </tr>
+    </thead>
+    <tbody *ngFor="let item of Agregados">
+      <tr>
+        <td><i class="fa " [ngClass]="{'fa-copyright': item.Icono == 1, 'fa-heart': item.Icono == 2,'fa-bicycle': item.Icono == 3,'fa-angellist': item.Icono == 4,'fa-yelp': item.Icono == 5,'fa-soccer-ball-o': item.Icono == 6,'fa-bell-slash': item.Icono == 7,'fa-slideshare': item.Icono == 8,'fa-cc-visa': item.Icono == 9,'fa-binoculars': item.Icono == 10}"></i> </td>
+        <td>{{item.Nombre}}</td>
+        <td>{{item.ApellidoPat}}</td>
+        <td>{{item.ApellidoMat}}</td>
+        <td>{{item.Edad}}</td>
+        <td>{{item.Sexo}}</td>
+        <td>{{item.Correo}}</td>
+      </tr>
+    </tbody>
+  </table>
+ 
+  
